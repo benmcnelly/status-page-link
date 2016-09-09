@@ -111,5 +111,9 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['jshint', 'browserify', 'uglify', 'cssmin']);
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> origin/master
 };
