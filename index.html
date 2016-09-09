@@ -8,13 +8,43 @@
 		<link href="dist/status-page-link.min.css" rel="stylesheet">
 		<!-- Optional: Font-Awesome Icons. -->
 		<script src="https://use.fontawesome.com/bf35b631bf.js"></script>
+
+		<style>
+		.all-is-well  {
+
+			background: rgb(191,210,85); /* Old browsers */
+			background: -moz-linear-gradient(top, rgba(191,210,85,1) 0%, rgba(114,170,0,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(191,210,85,1) 0%,rgba(114,170,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(191,210,85,1) 0%,rgba(114,170,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd255', endColorstr='#72aa00',GradientType=0 ); /* IE6-9 */
+			color: white; padding: 40px;  min-width: 500px; line-height:1.4; text-decoration:none; text-align: center; }
+
+		.ongoing {
+
+			background: rgb(237,223,97); /* Old browsers */
+			background: -moz-linear-gradient(top, rgba(237,223,97,1) 0%, rgba(234,156,0,1) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, rgba(237,223,97,1) 0%,rgba(234,156,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, rgba(237,223,97,1) 0%,rgba(234,156,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eddf61', endColorstr='#ea9c00',GradientType=0 ); /* IE6-9 */
+			color: white; padding: 40px;  min-width: 500px; line-height:1.4; text-decoration:none; text-align: center; }
+
+		.status-area  a {text-decoration:none; color: white; font-size: 20px;}
+		.status-area  small {display:block; opacity:.65; font-size: 19px;}
+		.status-area  i {margin-right:.5rem}
+		.ongoing   {font-size: 27px;}
+		.all-is-well {font-size: 37px;}
+		.loading {font-size: 47px;}
+		</style>
+
 	</head>
 	<body>
-		<!-- Basic HTML link as a fallback for non-js users. -->
-		<!-- Add data-status-link-for to make it dynamic. -->
-		<a href="https://status-bar-test.sorryapp.com" data-status-link-for="f1ff551f" title="Visit our status page">System Status</a>
 
-		<!-- Load in our library. -->
-		<script src="dist/status-page-link.min.js"></script>
+		<a href="https://status.strongholddata.com/" data-status-link-for="1e77d038" title="Visit our status page">Stronghold Cloud Status</a>
+
+		<hr>
+
+		<a href="https://status.strongholddata.com/" data-status-link-for="3ce3988a" title="Visit our status page">Stronghold Cloud Status</a>
+
+		<script src="dist/status-page-link.js"></script>
 	</body>
 </html>

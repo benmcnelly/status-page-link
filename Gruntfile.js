@@ -5,7 +5,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     // Default package configuration.
     pkg: grunt.file.readJSON('package.json'),
-    aws: grunt.file.readJSON('aws.json'),
+    // aws: grunt.file.readJSON('aws.json'),
 
     // Define a banner to added to the compiled assets.
     banner: "/* <%= pkg.name %> v<%= pkg.version %> | " +
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         tagName: 'status-page-link-<%= version %>', // TODO: We can't use a variable for the package name.
         afterBump: ['default'] // Rebuild the libs after version number bumped.
       }
-    },    
+    },
 
     // Minify Stylesheet Assets.
     cssmin: {
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'dist/', src: ['**'], dest: '<%= pkg.name %>/<%= pkg.version.split(".")[0] %>.<%= pkg.version.split(".")[1] %>.latest/'}
         ]
       }
-    }    
+    }
   });
 
   // Load the plugin that validates the JS markup.
@@ -111,5 +111,5 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['jshint', 'browserify', 'uglify', 'cssmin']);
-  
+
 };

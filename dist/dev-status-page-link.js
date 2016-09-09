@@ -11062,28 +11062,23 @@ return jQuery;
 
 		// Define the template for the link.
 		self.template = '\
-			<div class="{{state-icon-class}} status-area">\
-			<small>Current Status:</small>\
-			{{state-message}}\
-			</div>\
+			<small>Current Status:</small> \
+			<i class="{{state-icon-class}}" aria-hidden="true"></i>{{state-message}}\
 		';
 
 		// Set the state strings and icons.
 		self.states = {
 			'loading': {
-				'icon-class': 'fa fa-circle-o-notch fa-spin loading',
-				'message': 'Checking status...',
-				'style-class': 'loading'
+				'icon-class': 'fa fa-circle-o-notch fa-spin',
+				'message': 'Checking status...'
 			},
 			'ongoing': {
-				'icon-class': 'fa fa-times-circle-o ongoing',
-				'message': 'We are having issues at the moment',
-				'style-class': 'ongoing'
+				'icon-class': 'fa fa-times-circle-o',
+				'message': 'We are having issues at the moment'
 			},
 			'all-is-well': {
-				'icon-class': 'fa fa-check-circle-o all-is-well',
-				'message': 'All systems are go',
-				'style-class': 'all-is-well'
+				'icon-class': 'fa fa-check-circle-o',
+				'message': 'All systems are go'
 			}
 		};
 	};
@@ -11097,7 +11092,7 @@ return jQuery;
 
 		// Request the page data from the API.
 		// INFO: We pipe the status-bar-for value to support formats on various jQuery versions.
-		//       The first is latter versions of jQuery, the second is earlier vertions.
+		//       The first is latter versions of jQuery, the second is earlier vertions.		
 		self.api.fetchPage((self.options.statusLinkFor || self.options['status-link-for']), function(response) {
 			// See if we have any open notices.
 			// Filter notices to give us only open ones for display.
@@ -11180,7 +11175,6 @@ return jQuery;
 	});
 
 })(window, document);
-
 },{"jquery":2,"sorry-api":"sorry-api"}],"sorry-api":[function(require,module,exports){
 (function (global){
 /*jshint multistr: true */
